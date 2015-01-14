@@ -438,7 +438,7 @@
 			$('#send').click(function(){
 				$(this).val('Sending ...');
 				$('#success p').remove();
-				$.post('contact/contact.php', $('#contact-form').serialize(), function(response) {
+				$.post('contact/contact.php', function(response) {
 					$('#success').html(response);
 					//$('#success').hide('slow');
 					$('#send').val('Send a Message');
