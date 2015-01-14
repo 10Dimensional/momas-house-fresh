@@ -338,18 +338,17 @@
 				<section class="row section" id="contact">
 					<div class="row-content buffer even clear-after">
 					<div class="section-title"><h3>Contact</h3></div>	
-						<div class="column nine">
-							<div id="form-messages"></div>
-							<form class="contact-section" id="#contact-form" method="post" action="">
+						<<div class="column nine">
+							<form id="contact-form" class="contact-section" method="post" action="">
 								<span class="pre-input"><i class="icon icon-user"></i></span>
-								<input class="name plain buffer" name="name" type="text" placeholder="Full name" required>
+								<input class="name plain buffer" type="text" name="name" placeholder="Full name">
 								<span class="pre-input"><i class="icon icon-email"></i></span>
-								<input class="email plain buffer" name="email" type="email" placeholder="Email address" required>
-								<textarea class="plain buffer" name="message" placeholder="Send me a beautifully worded message or haiku" required></textarea>
-								<input class="plain button red" type="submit" value="Send" id="send">
-							</form>
+								<input class="email plain buffer" type="email" name="email" placeholder="Email address">
+								<textarea class="plain buffer" name="message" placeholder="Don't forget that kindness is all!"></textarea>
+								<input id="send" class="plain button red" type="button" value="Send a Message">
+							</form>	
 							<div id="success"></div>
-						</div>	
+						</div>
 						<div class="column three last">
 							<div class="widget">
 								<h4>Location</h4>
@@ -438,7 +437,7 @@
 			$('#send').click(function(){
 				$(this).val('Sending ...');
 				$('#success p').remove();
-				$.post('contact/contact.php', function(response) {
+				$.post('contact/contact.php', $('#contact-form').serialize(), function(response) {
 					$('#success').html(response);
 					//$('#success').hide('slow');
 					$('#send').val('Send a Message');
