@@ -1,7 +1,7 @@
 <!-- Contact form PHP script -->
 
 <?php
-    $name = $_POST['name'];
+  /*  $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
 
@@ -29,17 +29,17 @@
         }
     } else {
         echo '<p style="color:#F84B3C;">Invalid Email, please provide an correct email.</p>';
-    }  
+    } */ 
 
     // Use the script below if you want to use HTML emails instead
 
-    /*
+    
 
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    $to = 'xxxx@xxxx.com'; // Replace xxxx@xxxx.com with your email address (mandatory!) 
+    $to = 'sloane@lucidagency.com'; // Replace xxxx@xxxx.com with your email address (mandatory!) 
     $subject = 'Hello'; // Choose a custom subject (not mandatory)
 
     $body = '<html><body>';
@@ -70,6 +70,6 @@
         echo '<p style="color:#F84B3C;">Invalid Email, please provide an correct email.</p>';
     }   
 
-    */  
+     
 
 ?>
