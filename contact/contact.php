@@ -13,8 +13,6 @@
 
     $from = "From: Beetle Template"; // Replace "Beetle Template" with your site name (not mandatory)   
     $headers = "From:" . $from . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();    
                 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         if ($name != '' && $email != '' && $message != '') {
