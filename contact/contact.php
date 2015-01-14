@@ -5,7 +5,7 @@
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    $to = "sloane@lucidagency.com"; // Replace xxxx@xxxx.com with your email address (mandatory!) 
+    $to = "s10dimensional@gmail.com"; // Replace xxxx@xxxx.com with your email address (mandatory!) 
     $subject = "Hello"; // Choose a custom subject (not mandatory)
 
     $body = "You have received a message from " . $name . " (" . $email . "):\n\n" . $message;
@@ -16,7 +16,7 @@
     $headers .= "X-Mailer: PHP/" . phpversion();    
                 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        if (isset($name) && isset($email) && isset($email)) {
+        if ($name != '' && $email != '' && $message != '') {
                 
             if (mail ($to, $subject, $body, $headers)) { 
                 echo '<p style="color:#66A325;">Thanks! Your message has been sent.</p>';
