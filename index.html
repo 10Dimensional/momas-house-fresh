@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="css/layers.min.css" media="screen">
 		<link rel="stylesheet" href="css/font-awesome.min.css" media="screen"> 
 		<link rel="stylesheet" href="style.css" media="screen">
+		<link rel="stylesheet" href="form-style.css">
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light|Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
 		<!--[if lt IE 9]>
@@ -79,7 +80,7 @@
 		<main role="main" id="home">
 			<div id="intro-wrap">
 				<div id="intro" class="preload darken more-button">					
-					<div class="intro-item" style="background-image: url(http://41.media.tumblr.com/cd52265ae8e4869448d40c8298d8272a/tumblr_ndk6qp5Mqg1qfirfao1_1280.jpg); background-position: 0 0;">
+					<div class="intro-item" style="background-image: url(https://unsplash.imgix.net/photo-1416512107527-34cebecbac33?q=75&fm=jpg&s=58eff2b3daa3b797fb23fcd511d843ca); background-position: 0 -250px;">
 						<div class="caption" style="top: 160px !important;">
 							<img width="100" style="border-radius: 10px; margin: 20px auto; border: 12px solid white;" src="https://dl.dropboxusercontent.com/u/94424712/2015-01-11%2020.57.37.jpg">
 							<h2>Designer & Maker</h2>
@@ -98,7 +99,7 @@
 					<div class="row-content buffer even clear-after">
 							<div class="carousel-item">
 								<div class="column four">
-									<img src="https://dl.dropboxusercontent.com/u/94424712/mountain.gif" alt="" style="margin-top: -100px;">
+									<img src="https://dl.dropboxusercontent.com/u/94424712/mountain.gif" alt="" style="margin-top: -90px;">
 								</div>
 								<div class="column eight last">
 									<p style="font-weight: bold;">I'm an Arizona resident, currently living in Tempe, and I've been working in web development for 3+ years. My background is in front-end development and design, with modest back-end experience. In my spare time I love tinkering with new and exciting projects, drinking buckets of coffee, and doing yoga at my local studio. </p>
@@ -281,7 +282,7 @@
 									<div class="experience-info clear-after">
 										<h5>ASU -- W.P. Carey School of Business</h5>
 										<div class="role" style="margin-bottom: 20px;">Technical Support</div>
-										<p style="font-size: 16px; color: black; line-height: 15px;">2011 – Present</p>
+										<p style="font-size: 16px; color: black; line-height: 15px;">2011 – 2013</p>
 										<p style="font-size: 16px; color: black; line-height: 15px;">Tempe, AZ, United States of America</p>
 										<p style="font-size: 16px; color: black; line-height: 15px;">Toubleshooting // Customer Service</p>
 									</div><!-- experience-info -->
@@ -338,14 +339,16 @@
 					<div class="row-content buffer even clear-after">
 					<div class="section-title"><h3>Contact</h3></div>	
 						<div class="column nine">
-							<form class="contact-section">
+							<div id="form-messages"></div>
+							<form class="contact-section" id="#contact-form" method="post" action="mailer.php">
 								<span class="pre-input"><i class="icon icon-user"></i></span>
-								<input class="name plain buffer" type="text" placeholder="Full name">
+								<input class="name plain buffer" name="name" type="text" placeholder="Full name" required>
 								<span class="pre-input"><i class="icon icon-email"></i></span>
-								<input class="email plain buffer" type="email" placeholder="Email address">
-								<textarea class="plain buffer" placeholder="Send me a beautifully worded message or haiku"></textarea>
-								<input class="plain button red" type="submit" value="Send">
-							</form>	
+								<input class="email plain buffer" name="email" type="email" placeholder="Email address" required>
+								<textarea class="plain buffer" name="message" placeholder="Send me a beautifully worded message or haiku" required></textarea>
+								<input class="plain button red" type="submit" value="Send" id="send">
+							</form>
+							<div id="success"></div>
 						</div>	
 						<div class="column three last">
 							<div class="widget">
@@ -430,7 +433,20 @@
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>		
 		<script src="js/plugins.js"></script>
 		<script src="js/beetle.js"></script>
-
+		<script>
+		$(document).ready(function(){
+			$('#send').click(function(){
+				$(this).val('Sending ...');
+				$('#success p').remove();
+				$.post('contact/contact.php', $('#contact-form').serialize(), function(response) {
+					$('#success').html(response);
+					//$('#success').hide('slow');
+					$('#send').val('Send a Message');
+				});
+				return false;
+			});
+		});
+		</script>
 	</body>
 
 </html>
