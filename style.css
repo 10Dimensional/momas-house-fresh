@@ -1553,8 +1553,8 @@ ul.meta-social li a.linkedin-share:hover {
 
 .meta-social ul li a.pinterest-share:hover,
 ul.meta-social li a.pinterest-share:hover {
-    border-color: #c8232c;
-    background-color: #c8232c;
+    border-color: #39678F;
+    background-color: #39678F;
 }
 
 .meta-social ul li a.skype-share:hover,
@@ -3478,10 +3478,30 @@ footer .row-content.buffer {
 }
 
 /*----------------------------------------------------------------
-    768px Breakpoint
+    768px and 1024px Breakpoint
 ----------------------------------------------------------------*/
+@media handheld, only screen and (max-width:1024px) {
+    
+    #intro .intro-item {
+        background-position: center center !important;
+    }
+    #about .four img {
+        margin-top: -70px !important;
+    }
+    
+    #resume h3 {
+        padding: 0 20px !important;
+        line-height: 40px !important;
+    }
+    
+}
+
 
 @media handheld, only screen and (max-width:48em) {
+     #about .four img {
+        margin-top: -40px !important;
+        margin-bottom: 30px;
+    }
 
     header {
         position: relative !important;
@@ -3642,6 +3662,15 @@ footer .row-content.buffer {
         margin-bottom: 1em;
     }
 }
+
+@media handheld, only screen and (max-width:420px) {
+    
+    #skills {
+        background-size: cover !important;
+    }
+    
+}
+
 
 /*----------------------------------------------------------------
     320px Breakpoint - Fix some mockups
