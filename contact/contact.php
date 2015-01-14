@@ -1,75 +1,54 @@
-<!-- Contact form PHP script -->
-
 <?php
-  /*  $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    // My modifications to mailer script from:
+    // http://blog.teamtreehouse.com/create-ajax-contact-form
+    // Added input sanitizing to prevent injection
 
-    $to = "s10dimensional@gmail.com"; // Replace xxxx@xxxx.com with your email address (mandatory!) 
-    $subject = "Hello"; // Choose a custom subject (not mandatory)
+    // Only process POST reqeusts.
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get the form fields and remove whitespace.
+        $name = strip_tags(trim($_POST["name"]));
+				$name = str_replace(array("\r","\n"),array(" "," "),$name);
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $message = trim($_POST["message"]);
 
-    $body = "You have received a message from " . $name . " (" . $email . "):\n\n" . $message;
-
-    $from = "From: Beetle Template"; // Replace "Beetle Template" with your site name (not mandatory)   
-    $headers = "From:" . $from . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();    
-                
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        if ($name != '' && $email != '' && $message != '') {
-                
-            if (mail ($to, $subject, $body, $headers)) { 
-                echo '<p style="color:#66A325;">Thanks! Your message has been sent.</p>';
-            } else { 
-                echo '<p style="color:#F84B3C;">Something went wrong, go back and try again!</p>'; 
-            } 
-
-        } else {
-            echo '<p style="color:#F84B3C;">You need to fill in all required fields!</p>';
+        // Check that data was sent to the mailer.
+        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            // Set a 400 (bad request) response code and exit.
+            http_response_code(400);
+            echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+            exit;
         }
-    } else {
-        echo '<p style="color:#F84B3C;">Invalid Email, please provide an correct email.</p>';
-    } */ 
 
-    // Use the script below if you want to use HTML emails instead
+        // Set the recipient email address.
+        // FIXME: Update this to your desired email address.
+        $recipient = "sloane@lucidagency.com";
 
-    
+        // Set the email subject.
+        $subject = "New contact from $name";
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+        // Build the email content.
+        $email_content = "Name: $name\n";
+        $email_content .= "Email: $email\n\n";
+        $email_content .= "Message:\n$message\n";
 
-    $to = 'sloane@lucidagency.com'; // Replace xxxx@xxxx.com with your email address (mandatory!) 
-    $subject = 'Hello'; // Choose a custom subject (not mandatory)
+        // Build the email headers.
+        $email_headers = "From: $name <$email>";
 
-    $body = '<html><body>';
-    $body .= '<em style="color: #999;">You have received a message from <strong>' . $name . '</strong> (' . $email . '):</em>';
-    $body .= '<p>' . $message . '</p>';
-    $body .= '</body></html>';
-
-    $from = "From: Beetle Template"; // Replace "Beetle Template" with your site name (not mandatory)   
-    $headers = "From:" . $from . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();    
-                
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        if ($name != '' && $email != '' && $message != '') {
-                
-            if (mail ($to, $subject, $body, $headers)) { 
-                echo '<p style="color:#66A325;">Thanks! Your message has been sent.</p>';
-            } else { 
-                echo '<p style="color:#F84B3C;">Something went wrong, go back and try again!</p>'; 
-            } 
-
+        // Send the email.
+        if (mail($recipient, $subject, $email_content, $email_headers)) {
+            // Set a 200 (okay) response code.
+            http_response_code(200);
+            echo "Thank You! Your message has been sent.";
         } else {
-            echo '<p style="color:#F84B3C;">You need to fill in all required fields!</p>';
+            // Set a 500 (internal server error) response code.
+            http_response_code(500);
+            echo "Oops! Something went wrong and we couldn't send your message.";
         }
-    } else {
-        echo '<p style="color:#F84B3C;">Invalid Email, please provide an correct email.</p>';
-    }   
 
-     
+    } else {
+        // Not a POST request, set a 403 (forbidden) response code.
+        http_response_code(403);
+        echo "There was a problem with your submission, please try again.";
+    }
 
 ?>
