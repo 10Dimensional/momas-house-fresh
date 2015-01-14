@@ -16,7 +16,7 @@
     $headers .= "X-Mailer: PHP/" . phpversion();    
                 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        if ($name != '' && $email != '' && $message != '') {
+        if (isset($name) && isset($email) && isset($email)) {
                 
             if (mail ($to, $subject, $body, $headers)) { 
                 echo '<p style="color:#66A325;">Thanks! Your message has been sent.</p>';
