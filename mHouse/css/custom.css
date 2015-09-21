@@ -1,0 +1,967 @@
+@font-face {
+    font-family: KlinicBold;
+    src: url('../fonts/klinic/KlinicSlabMedium.otf');
+}
+
+@font-face {
+    font-family: KlinicItalic;
+    src: url('../fonts/klinic/KlinicSlabIt.otf');
+}
+p, input, textarea, a {
+    font-family: 'Lato', arial !important;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'KlinicBold', arial;
+}
+
+.hero.small,
+.hero.small .col-md-10{
+    min-height: 350px;
+    position: relative;
+}
+
+.hero.small .hero-content {
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    margin-top: -50px;
+    right: 0;
+    left: 0;
+    margin: -50px auto 0;
+    padding-top: 0;
+}
+
+.hero.small h1 {
+    margin: 0;
+    padding: 45px 0;
+}
+
+.sub {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.sub p {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 38px;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: 5px;
+    margin-left: 0;
+}
+
+.border {
+    border-top: solid #C58CB2 1px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.circle-cont {
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    overflow: hidden;
+    float: left;
+    margin: 0 50px 50px 0;
+}
+
+.custom-button {
+    background-color: #FCB215;
+    padding: 12px 30px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: inset 0 -3px 0 #DD8F00;
+}
+
+.custom-button:hover {
+    background: #ECA50D;
+    color: white !important; 
+}
+
+.custom-button.no-bg {
+    background: white;
+    box-shadow: inset 0 -3px 0 #FCB215;
+    color: #FCB215;
+    margin-left: 20px;
+}
+
+.member-actions li {
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+
+.content {
+    padding-top: 50px
+}
+
+.quote {
+    background-color: #EBEAE9;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.quote .container {
+    position: relative;
+}
+
+.quote p {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0 80px;
+    line-height: 34px;
+    margin: 0;
+    font-style: italic;
+    color: #4B44047;
+}
+
+.quote p .small {
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.quote i {
+    position: absolute; 
+}
+
+.quote .fa-quote-left {
+    top: 0px;
+    left: 0;
+}
+
+.quote .fa-quote-right {
+    right: 0;
+    bottom: 0;
+}
+
+.fa-heart,
+.fa-users,
+.fa-check,
+.fa-suitcase,
+.fa-thumbs-up,
+.fa-check-square-o,
+.fa-female,
+.fa-pencil,
+.fa-compass {
+    color: #FCB215 !important;
+    padding: 15px 0;
+}
+
+.primary-nav li {
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.btn-white,
+.btn-white:hover {
+    border: none;
+    color: white;
+}
+
+.clasping-hands {
+    background: url(../img/icon_hands.png) no-repeat;
+    background-size: 100%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.tile {
+    background: #992874;
+    padding: 30px;
+    text-align: center;
+    height: 420px;
+    float: left;
+    width: 33.33%;
+}
+
+.tile .inner {
+    float: none;
+    text-align: center;
+    width: 100%;
+}
+
+.tile-items {
+    position: relative;
+}
+
+.tile h3 {
+    color: white;
+}
+
+.tile p {
+    color: white;
+    line-height: 25px;
+    padding: 25px 40px;
+}
+
+.tile .circle {
+    background: url(../img/trans-overlay.png);
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 35px;
+}
+
+.tile .circle i {
+    color: white;
+    padding-top: 15px;
+}
+
+.tile .border {
+    width: 300px;
+    border-color: white;
+    margin-bottom: 20px;
+    opacity: .5;
+}
+
+.half .inner {
+    width: 400px;
+    float: right;
+}
+
+.half.second .inner {
+    float: left;
+}
+
+.half h3 {
+    color: white;
+}
+
+.half p {
+    color: white;
+    line-height: 25px;
+    padding: 0 40px 25px;
+}
+
+.half {
+    background: #992874;
+    padding: 30px;
+    text-align: center;
+    width: 50%;
+    height: 420px;
+    float: left;
+}
+
+.half .border {
+    opacity: .5;
+}
+
+.half .circle {
+    background: url(../img/trans-overlay.png);
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 35px;
+}
+.half .circle i {
+    color: white;
+    padding-top: 15px;
+}
+
+.half .border {
+    width: 300px;
+    border-color: white;
+    margin-bottom: 20px;
+}
+
+.purple {
+    color: #992874;
+}
+
+.yellow {
+    color: #FCB215;
+}
+
+.values {
+    text-align: left;
+}
+
+.values .empty {
+    height: 266px;
+}
+
+.values .intro-feature {
+    padding: 0 30px 0 0;
+}
+
+.values .intro-feature div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.values .intro-feature h5 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.values .intro-content {
+    float: right;
+}
+
+.values .intro-feature p {
+    line-height: 22px;
+}
+
+.values .number h1 {
+    color: #FCB215;;
+    font-size: 80px;
+    margin-right: 15px;
+    line-height: 0;
+    padding-top: 15px;
+    float: left;
+}
+
+.values .fa-compass {
+    color: #FCB215;
+    padding: 15px 0;
+}
+
+.values .row {
+    margin: 50px 0;
+}
+
+/* HOMEPAGE --------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+.home .hero {
+    background: url(../img/index.png) center center no-repeat;
+    background-size: cover;
+}
+
+.home .hero .hero-content .custom-button {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.home .hero p.intro {
+    margin-bottom: 0;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .tile:first-of-type {
+    background: #842565;
+}
+
+.home .tile:nth-of-type(2) {
+    background: #992874;
+}
+
+.home .tile:nth-of-type(3) {
+    background: #BB338F;
+}
+
+
+.home .fa-home {
+    color: #FCB215;
+    padding: 15px 0; /* -------------------------------------------------------------------------------------------------*/
+}
+
+.home .video.section-padding {
+    padding: 80px 0 100px;
+}
+
+.home .video h2 {
+    margin-bottom: 20px;
+}
+
+.home .video .border {
+    margin-bottom: 50px;
+}
+
+.home .video p {
+    padding-top: 30px;
+}
+
+.home .callout-section {
+    background: #64B500;
+    padding: 0px 0;
+    color: white;
+    text-align: center;
+}
+
+.home .callout-section h3 {
+    display: inline-block;
+}
+
+.home .callout-section .fa {
+    margin-right: 15px;
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+
+/* ABOUT ------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+.about .intro {
+    padding-bottom: 0;
+}
+
+.about .full-width-image {
+    background: url(../img/house-window-flowerpots-compressor.jpg) center no-repeat;
+    background-size: 100%;
+    width: 100%;
+    min-height: 200px;
+}
+
+.about .fa-cubes {
+    color: #FCB215;
+    padding: 15px 0;
+}
+
+/* DONATE ----------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+.donate .hero {
+    background: url(../img/donate_hero.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.donate .pay-portal {
+    position: relative;
+}
+
+.donate .pay-portal .or {
+    position: absolute;
+    background: #621849;
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    
+}
+
+.donate .pay-portal .or h4 {
+    color: white;
+    font-size: 22px;
+    padding-top: 7px;
+    font-style: italic;
+}
+
+.donate .paypal .inner {
+    width: 400px;
+    float: right;
+}
+
+.donate .paypal h3 {
+    color: white;
+}
+
+.donate .paypal p {
+    color: white;
+    line-height: 25px;
+    padding: 25px 40px;
+}
+
+.donate .contact-form .inner {
+    width: 400px;
+    float: left;
+}
+
+.donate .paypal {
+    background: #992874;
+    padding: 30px;
+    text-align: center;
+    width: 50%;
+    height: 420px;
+    float: left;
+}
+
+.donate .paypal .border {
+    opacity: .5;
+}
+
+
+.donate .paypal .circle {
+    background: white;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 35px;
+}
+
+.donate .paypal .circle i {
+    color: #64B500;
+    padding-top: 15px;
+}
+
+.donate .paypal .border {
+    width: 300px;
+    border-color: white;
+    margin-bottom: 20px;
+}
+
+.fa-heart,
+.fa-users{
+    color: #FCB215 !important;
+    padding: 15px 0;
+}
+
+.donate .contact-form {
+    background: #EBEAE9;
+    width: 50%;
+    float: right;
+    padding: 30px 0 30px 70px;
+    height: 420px;
+}
+
+.donate .contact-form form {
+    padding: 20px 0;
+}
+
+.donate .contact-form input[type=text] {
+    box-shadow: inset 0 3px 0 #FCB215;
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    padding-left: 10px;
+    width: 48%;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.donate .contact-form input[type=text]:first-of-type {
+    margin-right: 10px;
+}
+
+.donate .contact-form textarea {
+    box-shadow: inset 0 3px 0 #FCB215;
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 100%;
+    height: 122px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.donate .fa-thumbs-up {
+    color: #FCB215;
+    padding: 15px 0;
+}
+
+.donate .contact-form .custom-button {
+    border: none;
+}
+
+.donate .intro.section-padding {
+    padding: 65px 0 45px;
+}
+
+.donate .feature {
+    background: #EBEAE9;
+    height: 200px;
+    overflow: hidden;
+    margin: 25px 0;
+    border-radius: 5px;
+}
+
+.donate .feature img {
+    padding: 0;
+}
+
+.donate .feature .inner {
+    padding: 20px 30px;
+}
+
+.donate .feature .inner h3 {
+    margin: 0 0 10px 0;
+    color: #992874;
+}
+
+.donate .feature .inner p {
+    line-height: 26px;
+    color: #4B4047;
+    padding-top: 15px;
+}
+
+.donate .full-width {
+    width: 100%;
+    background: url("../img/hero.jpg") center center;
+    background-size: cover;
+    text-align: center;
+    padding: 30px 0 40px;
+}
+
+.donate .full-width h2,
+.donate .full-width p {
+    color: white;
+}
+
+.donate .full-width h2 {
+    margin-top: 0;
+}
+
+.donate .full-width a {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.donate .fa-star {
+    color: white;
+    padding: 15px 0;
+}
+
+/* PROGRAMS --------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+.programs .hero {
+    background: url(../img/volunteer.png) center center no-repeat;
+    background-size: cover;
+}
+
+.programs .intro.section-padding {
+    padding: 120px 0 45px;
+}
+
+.programs .content .circle-cont {
+    float: right;
+    margin-left: 20px;
+}
+
+
+.programs .content .circle-cont {
+    float: right;
+    margin-left: 20px;
+}
+
+.programs .circle-cont img {
+    width: 100%;
+}
+
+.programs .halfsies .or {
+    display: none;
+}
+
+.programs .half.short-term {
+    background-color: #992874;
+    background-size: 100%;
+}
+
+.programs .half.long-term {
+    background-color: #EBEAE9;
+    background-size: cover;
+    color: #4B4047;
+}
+
+.programs .half.long-term h3,
+.programs .half.long-term p {
+    color:#4B4047 ;
+}
+
+.programs .half.long-term .border {
+    border-color: #992874;
+}
+
+.programs .volunteers .description {
+    text-align: center;
+}
+
+.programs .volunteers .trait {
+    text-align: center;
+}
+
+.programs .volunteers p {
+    text-align: center;
+    line-height: 24px;
+}
+
+.programs .fa-star {
+    color: #FCB215;
+    padding: 15px 0;
+}
+
+.programs .opportunities .container {
+    background: #EBEAE9;
+    padding: 30px 70px 150px;
+}
+
+.programs .opportunities p {
+    padding: 25px 50px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.programs .opportunities h4 {
+    width: 100%;
+    background: #D8D5D5;
+    color: #4B4047;
+    padding: 10px 15px;
+    margin: 15px 0;
+    cursor: pointer;
+    
+    transition: ease-in-out all .05s;
+    transition: ease-in-out all .05s;
+    -webkit-transition: ease-in-out all .05s;
+    -moz-transition: ease-in-out all .05s;
+    -ms-transition: ease-in-out all .05s;
+}
+
+.programs .opportunities h4:hover {
+    background: #4B4047;
+    color: white;
+    
+    transition: ease-in-out all .05s;
+    -webkit-transition: ease-in-out all .05s;
+    -moz-transition: ease-in-out all .05s;
+    -ms-transition: ease-in-out all .05s;
+}
+
+/* GET HELP --------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+.get-help .hero {
+    background: url(../img/get-help.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.get-help .hero.small h1 {
+    margin: 0;
+    padding: 45px 0;
+}
+
+.get-help .content .container {
+    margin: 70px auto;
+}
+
+.get-help .round-rect {
+    width: 300px;
+    height: 250px;
+    float: right;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-left: 40px;
+}
+
+.get-help .container.last p {
+    padding-bottom: 0;
+}
+
+.get-help .round-rect.left {
+    float: left;
+    margin-right: 40px;
+    margin-left: 0;
+    height: 560px;
+}
+
+.get-help .round-rect img {
+    width: 100%;
+}
+
+.get-help .content .container h3 {
+    margin-top: 0;
+    color: #992874;
+}
+
+.get-help .content li {
+    list-style: circle;
+     list-style-position: inside;
+     line-height: 32px;
+}
+
+.get-help .content .container:nth-of-type(2) .round-rect,
+.get-help .content .container:last-of-type .round-rect{
+    height: 550px;
+}
+
+.get-help .quote {
+    background: #992874;
+    color: white;
+}
+
+.get-help .quote p {
+    color: white;
+}
+
+.get-help .intro.section-padding {
+    padding: 120px 0 0;
+}
+
+.get-help .content {
+    padding-top: 0px;
+} 
+
+.get-help .resources {
+    background: #EBEAE9;
+}
+
+.get-help .resources .left {
+    width: 60%;
+    float: left;
+    margin-right: 60px;
+}
+
+.get-help .resources .left h1 {
+    margin-top: 0;
+}
+
+.get-help .resources .right {
+    width: 32%;
+    float: right;
+}
+
+.get-help .resources .right p {
+    padding: 0;
+}
+
+.get-help .resources .right h3 {
+    margin-top: 5px;
+}
+
+.get-help .resources .left p.purple {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.get-help .resources .left .custom-button {
+    font-size: 24px;
+    
+}
+
+.get-help .border.left {
+    float: left;
+}
+
+.get-help .border.right {
+    float: right;
+    margin: 0;
+}
+
+.get-help .resources.section-padding {
+    padding: 60px 0 80px;
+}
+
+.get-help .border.purple {
+    border-color: #992874;
+    width: 200px;
+}
+
+/* CONTACT ---------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+.contact .hero {
+    background: url(../img/contact.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.contact .intro.section-padding {
+    padding: 80px 0 70px;
+}
+
+.contact .content p {
+    text-align: center;
+}
+
+.contact form input[type=text] {
+    box-shadow: inset 0 3px 0 #FCB215;
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    padding-left: 10px;
+    width: 48%;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.contact form input[type=text]:nth-of-type(1),
+.contact form input[type=text]:nth-of-type(3){
+    margin-right: 10px;
+}
+
+
+
+.contact form input[type=text]:nth-of-type(5) {
+    width: 100%;
+}
+
+.contact form textarea {
+    box-shadow: inset 0 3px 0 #FCB215;
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.contact .contact-us p:nth-of-type(2) {
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.contact .info.left {
+    float: left;
+    width: 250px;
+}
+
+.contact .info.left h3 {
+    margin-top: 0;
+    color: #992874;
+    text-align: left;
+}
+
+.contact form.right {
+    float: right;
+    width: 500px;
+}
+
+.contact form.right input[type=submit] {
+    border: 0;
+     padding: 12px 55px 15px;
+}
+
+.contact .info.left p {
+    font-size: 18px;
+    padding: 0;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.contact .info.left .border {
+    width: 150px;
+    margin: 0;
+}
+
+.contact .contact-us {
+    padding: 60px 0;
+}
+
+/* MEDIA QUERIES ---------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
