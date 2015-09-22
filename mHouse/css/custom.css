@@ -380,6 +380,10 @@ h1, h2, h3, h4 {
     margin-bottom: 20px;
 }
 
+.home .hero .border {
+    border-color: white;
+}
+
 .home .video .border {
     margin-bottom: 50px;
 }
