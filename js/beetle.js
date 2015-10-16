@@ -212,7 +212,7 @@ jQuery(document).ready(function ($) {
 
     /* Fixed header if there's no Big slider */
 
-    if (!pxWrapper.length) {
+    if (!pxWrapper.length || $(window).scrollTop(350)) {
 
         header.addClass('fixed-header');
 

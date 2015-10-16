@@ -435,7 +435,7 @@ h1, h2, h3, h4 {
 /* ------------------------------------------------------------------ */
 
 .donate .hero {
-    background: url(../img/donate_hero.jpg) center center no-repeat;
+    background: url(../img/donate-hero.jpg) center center no-repeat;
     background-size: cover;
 }
 
