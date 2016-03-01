@@ -68,7 +68,7 @@ h1, h2, h3, h4 {
     border-radius: 300px;
     overflow: hidden;
     float: left;
-    margin: 0 50px 50px 0;
+    margin: 0 50px 55px 0;
 }
 
 .custom-button {
@@ -350,6 +350,14 @@ h1, h2, h3, h4 {
     margin-bottom: 0;
 }
 
+.home .intro.section-padding {
+    padding: 50px 0 20px;
+}
+
+.home .intro.section-padding .col-md-12 p {
+    font-size: 18px;
+}
+
 .home .content {
     text-align: center;
 }
@@ -485,6 +493,15 @@ h1, h2, h3, h4 {
     float: left;
 }
 
+.donate .contact-form h3 {
+    margin-top: 10px;
+}
+
+.donate .contact-form p {
+    margin: 0;
+    padding: 0;
+}
+
 .donate .paypal {
     background: #992874;
     padding: 30px;
@@ -529,7 +546,7 @@ h1, h2, h3, h4 {
     background: #EBEAE9;
     width: 50%;
     float: right;
-    padding: 30px 0 30px 70px;
+    padding: 15px 0 30px 70px;
     height: 420px;
 }
 
@@ -657,7 +674,8 @@ h1, h2, h3, h4 {
 }
 
 .programs .circle-cont img {
-    width: 100%;
+    width: 134%;
+    margin-left: -20px;
 }
 
 .programs .halfsies .or {
@@ -964,6 +982,16 @@ h1, h2, h3, h4 {
 .contact .contact-us {
     padding: 60px 0;
 }
+
+/* NEWS & EVENTS ---------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+.blog .hero {
+    background: url("../img/girl-with-camera.jpg") center -80px;
+    background-size: cover;
+}
+
 
 /* MEDIA QUERIES ---------------------------------------------------- */
 /* ------------------------------------------------------------------ */
